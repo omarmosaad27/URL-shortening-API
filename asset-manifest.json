@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/URL-shortening-API/static/css/main.9630c532.css",
+    "main.js": "/URL-shortening-API/static/js/main.d375e0ad.js",
+    "static/media/illustration-working.png": "/URL-shortening-API/static/media/illustration-working.f081e9cd3e621b3aeac6.png",
+    "index.html": "/URL-shortening-API/index.html",
+    "main.9630c532.css.map": "/URL-shortening-API/static/css/main.9630c532.css.map",
+    "main.d375e0ad.js.map": "/URL-shortening-API/static/js/main.d375e0ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9630c532.css",
+    "static/js/main.d375e0ad.js"
+  ]
+}
