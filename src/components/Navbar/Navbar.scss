@@ -1,0 +1,118 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 8rem;
+    gap: 30px;
+    .nav-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .menu-icon{
+            display: none;
+        }
+    }
+    .nav-links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .links,.register{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            color: var(--Dark-grey);
+            a{
+                color: var(--Dark-grey);
+                &:hover{
+                    color: var(--Very-Dark-Violet);
+                    cursor: pointer;
+                }
+            }
+            li{
+                transition: all 0.3s linear;
+                &:hover{
+                    color: var(--Very-Dark-Violet);
+                    cursor: pointer;
+                }
+            }
+        }
+        
+    }
+}
+@media screen and (max-width:992px) {
+    nav{
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width:700px) {
+    nav{
+        position: relative;
+        padding: 2rem;
+        justify-content: space-between;
+        .nav-header{
+            justify-content: space-between;
+            width: 100%;
+            .menu-icon{
+                display: block;
+                cursor: pointer;
+                font-size: 1.5rem;
+            }
+        }
+        .nav-links{
+            position: absolute;
+            flex-direction: column;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            transition: all 0.3s linear;
+        }
+        .nav-links.open{
+            position: absolute;
+            flex-direction: column;
+            top: 6rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            background-color: var(--Dark-Violet);
+            .links,.register{
+                flex-direction: column;
+                width: 100%;
+                color: white;
+                li:hover{
+                    color: var(--Dark-grey);
+                }
+                a{
+                    color:white;
+                    &:hover{
+                    color: var(--Dark-grey);
+                    cursor: pointer;
+                    }
+                }
+            }
+            .register{
+                margin-top: 40px;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: -20px;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: var(--Dark-grey);
+                    opacity: 0.2;
+                }
+                .btn{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,191 @@
+form {
+  padding: 2rem 8rem;
+  background-color: #eee;
+}
+
+form .form {
+  width: 100%;
+  padding: 3rem;
+  background: url(./../../images/bg-shorten-desktop.png);
+  background-color: var(--Dark-Violet);
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+form .form input {
+  width: 80%;
+  height: 40px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+form .form .error {
+  border: 2px solid var(--Red);
+  position: relative;
+}
+
+form .form .error-msg {
+  position: absolute;
+  left: 5rem;
+  bottom: 10px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: var(--Red);
+}
+
+form .form .submit {
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: var(--Cyan);
+  padding: 0.7rem 0.7rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+form .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+form .links .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+form .links .link .shorten {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+form .links .link .shorten div {
+  color: var(--Cyan);
+}
+
+form .links .link .shorten .copy {
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: var(--Cyan);
+  padding: 0.7rem 0.7rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+form .links .link .shorten .copy.copied {
+  background-color: var(--Dark-Violet);
+}
+
+@media screen and (max-width: 992px) {
+  form {
+    padding: 2rem 4rem;
+  }
+  form .form .submit {
+    font-size: 0.8rem;
+  }
+  form .form .error-msg {
+    left: 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  form .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+    padding: 1rem;
+  }
+  form .form .submit, form .form input {
+    width: 100%;
+  }
+  form .form .error-msg {
+    bottom: 4rem;
+    left: 1rem;
+  }
+  form .links .link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+  }
+  form .links .link .original {
+    position: relative;
+    width: 100%;
+  }
+  form .links .link .original::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--Dark-grey);
+    left: 0;
+    bottom: -10px;
+    opacity: 0.2;
+  }
+  form .links .link .shorten {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+  }
+  form .links .link .shorten .copy {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=Form.css.map */

@@ -1,0 +1,115 @@
+.states {
+  background-color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8rem 8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.states .desc {
+  width: 50%;
+  text-align: center;
+  color: var(--Dark-grey);
+}
+
+.states .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.states .cards .card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 300px;
+}
+
+.states .cards .card img {
+  background-color: var(--Dark-Violet);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
+.states .cards .card .card-title {
+  font-size: 1.2rem;
+}
+
+.states .cards .card .card-desc {
+  font-size: 1rem;
+  color: var(--Dark-grey);
+}
+
+.states .cards .card:nth-child(1) {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.states .cards .card:nth-child(2) {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.states .cards .card:last-child {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.states .underline {
+  width: 50%;
+  height: 6px;
+  background-color: var(--Cyan);
+  position: absolute;
+  bottom: 180px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1200px) {
+  .states .underline {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .states {
+    padding: 8rem 4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .states {
+    padding: 8rem 2rem;
+  }
+  .states .desc {
+    width: 100%;
+  }
+  .states .underline {
+    display: block;
+    width: 6px;
+    height: 50%;
+  }
+}
+/*# sourceMappingURL=States.css.map */

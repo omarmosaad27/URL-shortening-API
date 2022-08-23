@@ -1,0 +1,146 @@
+form{
+    padding: 2rem 8rem;
+    background-color: #eee;
+    .form{
+        width: 100%;
+        padding: 3rem;
+        background: url(./../../images/bg-shorten-desktop.png);
+        background-color: var(--Dark-Violet);
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        input{
+            width: 80%;
+            height: 40px;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            outline: none;
+            
+        }
+        .error{
+            border: 2px solid var(--Red);
+            position: relative;
+        }
+        .error-msg{
+            position: absolute;
+            left: 5rem;
+            bottom: 10px;
+            font-size: 1rem;
+            text-transform: capitalize;
+            color: var(--Red);
+        }
+        .submit{
+            border-radius: 0.5rem ;
+            outline: none;
+            background-color: var(--Cyan);
+            padding: 0.7rem 0.7rem;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 20px;
+        .link{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            .shorten{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                div{
+                    color: var(--Cyan);
+                }
+                .copy{
+                    border-radius: 0.5rem ;
+                    outline: none;
+                    background-color: var(--Cyan);
+                    padding: 0.7rem 0.7rem;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                }
+                .copy.copied{
+                    background-color: var(--Dark-Violet);
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:992px) {
+    form{
+        padding: 2rem 4rem;
+        .form{
+            .submit{
+                font-size: 0.8rem;
+            }
+            .error-msg{
+                left: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px){
+    form{
+        .form{
+            flex-direction: column;
+            gap: 40px;
+            padding: 1rem;
+            .submit,input{
+                width: 100%;
+            }
+            .error-msg{
+                bottom: 4rem;
+                left: 1rem;
+            }
+        }
+        .links{
+            .link{
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+                gap: 20px;
+                .original{
+                    position: relative;
+                    width: 100%;
+                }
+                .original::after{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: var(--Dark-grey);
+                    left: 0;
+                    bottom: -10px;
+                    opacity: 0.2;
+                }
+                .shorten{
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 100%;
+
+                    .copy{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

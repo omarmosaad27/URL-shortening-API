@@ -1,0 +1,22 @@
+.boost{
+    background-image: url(./../../images/bg-boost-desktop.png);
+    background-color: var(--Dark-Violet);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2{
+        color: white;
+    }
+    button{
+        outline: none;
+        background-color: var(--Cyan);
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,90 @@
+.states{
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 8rem;
+    position: relative;
+    z-index: 1;
+    .desc{
+        width: 50%;
+        text-align: center;
+        color: var(--Dark-grey);
+    }
+    .cards{
+        display: flex;
+        margin-top: 80px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        .card{
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            width: 300px;
+            img{
+                background-color: var(--Dark-Violet);
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                padding: 0.5rem;
+                transform: translateY(-50px);
+            }
+            .card-title{
+                font-size: 1.2rem;
+            }
+            .card-desc{
+                font-size: 1rem;
+                color: var(--Dark-grey);
+            }
+        }
+        .card:nth-child(1){
+            transform: translateY(0px);
+        }
+        .card:nth-child(2){
+            transform: translateY(50px);
+        }
+        .card:last-child{
+            transform: translateY(100px);
+        }
+
+    }
+    .underline{
+        width: 50%;
+        height: 6px;
+        background-color: var(--Cyan);
+        position: absolute;
+        bottom: 180px;
+        z-index: -1;
+    }
+}
+@media screen and (max-width:1200px) {
+    .states{
+        .underline{
+            display: none;
+        }
+    }
+
+}
+@media screen and (max-width:992px) {
+    .states{
+        padding: 8rem 4rem;
+    }
+
+}
+
+@media screen and (max-width:700px){
+    .states{
+        padding: 8rem 2rem;
+        .desc{
+            width: 100%;
+        }
+        .underline{
+            display: block;
+            width: 6px;
+            height: 50%;
+
+        }
+    }
+}

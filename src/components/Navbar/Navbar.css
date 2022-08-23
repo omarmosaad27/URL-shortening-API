@@ -1,0 +1,168 @@
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 8rem;
+  gap: 30px;
+}
+
+nav .nav-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav-header .menu-icon {
+  display: none;
+}
+
+nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+nav .nav-links .links, nav .nav-links .register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  color: var(--Dark-grey);
+}
+
+nav .nav-links .links a, nav .nav-links .register a {
+  color: var(--Dark-grey);
+}
+
+nav .nav-links .links a:hover, nav .nav-links .register a:hover {
+  color: var(--Very-Dark-Violet);
+  cursor: pointer;
+}
+
+nav .nav-links .links li, nav .nav-links .register li {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+nav .nav-links .links li:hover, nav .nav-links .register li:hover {
+  color: var(--Very-Dark-Violet);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    position: relative;
+    padding: 2rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav .nav-header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  nav .nav-header .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  nav .nav-links {
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: -100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 90%;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  nav .nav-links.open {
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 6rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 90%;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    background-color: var(--Dark-Violet);
+  }
+  nav .nav-links.open .links, nav .nav-links.open .register {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    color: white;
+  }
+  nav .nav-links.open .links li:hover, nav .nav-links.open .register li:hover {
+    color: var(--Dark-grey);
+  }
+  nav .nav-links.open .links a, nav .nav-links.open .register a {
+    color: white;
+  }
+  nav .nav-links.open .links a:hover, nav .nav-links.open .register a:hover {
+    color: var(--Dark-grey);
+    cursor: pointer;
+  }
+  nav .nav-links.open .register {
+    margin-top: 40px;
+    position: relative;
+  }
+  nav .nav-links.open .register::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--Dark-grey);
+    opacity: 0.2;
+  }
+  nav .nav-links.open .register .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */
